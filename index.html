@@ -32,5 +32,14 @@
       </h1>
     </div>
   </div>
+  <audio id="bg-music" src="audio/cowboys.mp3" preload="auto" loop></audio>
+  <script>
+    let started = false;
+    document.addEventListener('click', () => {
+      if (started) return;
+      started = true;
+      document.getElementById('bg-music').play();
+    });
+  </script>
 </body>
 </html>
