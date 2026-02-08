@@ -14,17 +14,13 @@
     body { font-family: 'Inter', sans-serif; }
     /* Fix mobile viewport height (accounts for browser chrome) */
     .full-height { height: 100vh; height: 100dvh; }
-    /* Force landscape on mobile */
-    @media (orientation: portrait) {
-      html { transform: rotate(90deg); transform-origin: top left; width: 100vh; height: 100vw; position: absolute; top: 0; left: 100vw; }
-    }
   </style>
 </head>
 <body class="m-0 p-0 overflow-hidden">
   <div class="relative w-screen full-height">
     <!-- Backdrop image (falls back to gradient if image not yet added) -->
     <div
-      class="absolute inset-0 bg-contain sm:bg-cover bg-center bg-no-repeat bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-950"
+      class="absolute inset-0 bg-cover bg-center bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-950"
       style="background-image: url('images/backdrop.jpg');"
     ></div>
 
