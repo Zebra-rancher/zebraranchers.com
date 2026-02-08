@@ -14,6 +14,10 @@
     body { font-family: 'Inter', sans-serif; }
     /* Fix mobile viewport height (accounts for browser chrome) */
     .full-height { height: 100vh; height: 100dvh; }
+    /* Force landscape on mobile */
+    @media (orientation: portrait) {
+      html { transform: rotate(90deg); transform-origin: top left; width: 100vh; height: 100vw; position: absolute; top: 0; left: 100vw; }
+    }
   </style>
 </head>
 <body class="m-0 p-0 overflow-hidden">
