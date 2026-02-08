@@ -12,13 +12,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Inter', sans-serif; }
+    /* Fix mobile viewport height (accounts for browser chrome) */
+    .full-height { height: 100vh; height: 100dvh; }
   </style>
 </head>
 <body class="m-0 p-0 overflow-hidden">
-  <div class="relative w-screen h-screen">
+  <div class="relative w-screen full-height">
     <!-- Backdrop image (falls back to gradient if image not yet added) -->
     <div
-      class="absolute inset-0 bg-cover bg-center bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-950"
+      class="absolute inset-0 bg-cover bg-[center_30%] sm:bg-center bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-950"
       style="background-image: url('images/backdrop.jpg');"
     ></div>
 
@@ -26,8 +28,8 @@
     <div class="absolute inset-0 bg-black/60"></div>
 
     <!-- Content -->
-    <div class="relative z-10 flex items-center justify-center w-full h-full">
-      <h1 id="main-text" class="text-white/40 text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-widest select-none cursor-pointer">
+    <div class="relative z-10 flex items-end sm:items-center justify-center w-full h-full pb-16 sm:pb-0">
+      <h1 id="main-text" class="text-white/40 text-xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-widest select-none cursor-pointer">
         CLICK HERE
       </h1>
     </div>
